@@ -1,3 +1,4 @@
+using Microsoft.Win32.SafeHandles;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
@@ -18,6 +19,8 @@ namespace CICD_Testing
             options.AddArgument(string.Format("user-data-dir={0}", appdatapath + "Google\\Chrome\\User Data"));
             options.AddUserProfilePreference("download.prompt_for_download", true);
             options.AddArguments("--disable-extensions");
+            options.AddArguments("--headless");
+            options.AddArguments("--disabled-dev-shm-usage");
             uniqueInstanceWebDriver = new ChromeDriver(options);
         }
 

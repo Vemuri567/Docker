@@ -13,14 +13,16 @@ namespace CICD_Testing
             string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             appdatapath = appdatapath.Replace("Roaming", "");
             ChromeOptions options = new ChromeOptions();
+            options.AddArguments("--no-sandbox");
+            options.AddArguments("--disabled-dev-shm-usage");
+            options.AddArguments("--headless");
             options.AcceptInsecureCertificates = true;
             options.AddArgument("--ignore-ssl-errors=yes");
             options.AddArgument("--ignore-certificate-errors");
             options.AddArgument(string.Format("user-data-dir={0}", appdatapath + "Google\\Chrome\\User Data"));
             options.AddUserProfilePreference("download.prompt_for_download", true);
             options.AddArguments("--disable-extensions");
-            options.AddArguments("--headless");
-            options.AddArguments("--disabled-dev-shm-usage");
+           
             uniqueInstanceWebDriver = new ChromeDriver(options);
         }
 

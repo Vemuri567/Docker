@@ -1,6 +1,7 @@
 using Microsoft.Win32.SafeHandles;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Remote;
 
 namespace CICD_Testing
 {
@@ -22,8 +23,8 @@ namespace CICD_Testing
             options.AddArgument(string.Format("user-data-dir={0}", appdatapath + "Google\\Chrome\\User Data"));
             options.AddUserProfilePreference("download.prompt_for_download", true);
             options.AddArguments("--disable-extensions");
-           
-            uniqueInstanceWebDriver = new ChromeDriver(options);
+            uniqueInstanceWebDriver = new RemoteWebDriver(new Uri("http://172.30.208.1:8082/wd/hub"), options);
+            //uniqueInstanceWebDriver = new ChromeDriver(options);
         }
 
         [Test]

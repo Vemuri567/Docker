@@ -32,7 +32,7 @@ namespace CICD_Testing
         {
             uniqueInstanceWebDriver.Navigate().GoToUrl("https://amazon.in");
             uniqueInstanceWebDriver.Manage().Window.Maximize();
-            Thread.Sleep(50000);
+            //Thread.Sleep(50000);
             Console.WriteLine(uniqueInstanceWebDriver.Title);
             uniqueInstanceWebDriver.FindElement(By.XPath("//input[@id='twotabsearchtextbox']")).SendKeys("Mobiles");
             Thread.Sleep(500000);

@@ -34,7 +34,7 @@ namespace CICD_Testing
             uniqueInstanceWebDriver.Manage().Window.Maximize();
             Thread.Sleep(50000);
             Console.WriteLine(uniqueInstanceWebDriver.Title);
-            uniqueInstanceWebDriver.FindElement(By.XPath("//a[text()='Mobiles']"));
+            uniqueInstanceWebDriver.FindElement(By.XPath("//input[@id='twotabsearchtextbox']")).SendKeys("Mobiles");
             Thread.Sleep(500000);
             Console.WriteLine("output");
         }

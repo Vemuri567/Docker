@@ -46,7 +46,7 @@ namespace CICD_Testing
         [Test]
         public void Test3()
         {
-            uniqueInstanceWebDriver.Url = "https://youtube.com/";
+            uniqueInstanceWebDriver.Url = "https://youtube1.com/";
         }
 
         [Test]

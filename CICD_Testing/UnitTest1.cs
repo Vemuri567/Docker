@@ -30,10 +30,12 @@ namespace CICD_Testing
         [Test]
         public void Test1()
         {
-            uniqueInstanceWebDriver.Navigate().GoToUrl("https://youtube.com/");
+            uniqueInstanceWebDriver.Navigate().GoToUrl("https://amazon.in");
             uniqueInstanceWebDriver.Manage().Window.Maximize();
             Thread.Sleep(50000);
             Console.WriteLine(uniqueInstanceWebDriver.Title);
+            uniqueInstanceWebDriver.FindElement(By.XPath("//a[text()='Mobiles']"));
+            Thread.Sleep(500000);
             Console.WriteLine("output");
         }
 

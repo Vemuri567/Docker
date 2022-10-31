@@ -35,7 +35,7 @@ namespace CICD_Testing
             //Thread.Sleep(50000);
             Console.WriteLine(uniqueInstanceWebDriver.Title);
             uniqueInstanceWebDriver.FindElement(By.XPath("//input[@id='twotabsearchtextbox']")).SendKeys("Mobiles");
-            Thread.Sleep(500000);
+            //Thread.Sleep(500000);
             Console.WriteLine("output");
         }
 

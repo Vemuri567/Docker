@@ -39,7 +39,7 @@ namespace CICD_Testing
             Console.WriteLine("output");
         }
 
-        [Test]
+       /* [Test]
         public void Test2()
         {
             uniqueInstanceWebDriver.Url = "https://youtube.com/";
@@ -62,7 +62,7 @@ namespace CICD_Testing
         {
             uniqueInstanceWebDriver.Url = "https://youtube.com/";
         }
-
+*/
 
         [TearDown]
         public void TearDown()

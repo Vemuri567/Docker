@@ -23,7 +23,7 @@ namespace CICD_Testing
             options.AddArgument(string.Format("user-data-dir={0}", appdatapath + "Google\\Chrome\\User Data"));
             options.AddUserProfilePreference("download.prompt_for_download", true);
             options.AddArguments("--disable-extensions");
-            uniqueInstanceWebDriver = new RemoteWebDriver(new Uri("http://192.60.0.159:9091/wd/hub"), options);
+            uniqueInstanceWebDriver = new RemoteWebDriver(new Uri("http://172.18.0.2/16:4444/wd/hub"), options);
             //uniqueInstanceWebDriver = new ChromeDriver(options);
         }
 

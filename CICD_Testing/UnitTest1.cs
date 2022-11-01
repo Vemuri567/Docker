@@ -30,7 +30,7 @@ namespace CICD_Testing
         [Test]
         public void Test1()
         {
-            uniqueInstanceWebDriver.Navigate().GoToUrl("https://www.amazon.in");
+            uniqueInstanceWebDriver.Url="https://www.amazon.in";
             uniqueInstanceWebDriver.Manage().Window.Maximize();
             //Thread.Sleep(50000);
             Console.WriteLine(uniqueInstanceWebDriver.Title);

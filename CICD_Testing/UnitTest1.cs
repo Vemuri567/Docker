@@ -2,6 +2,7 @@ using Microsoft.Win32.SafeHandles;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
+using OpenQA.Selenium.Support.UI;
 
 namespace CICD_Testing
 {
@@ -33,10 +34,10 @@ namespace CICD_Testing
             uniqueInstanceWebDriver.Url="https://www.amazon.in";
             //uniqueInstanceWebDriver.Manage().Window.Maximize();
             //Thread.Sleep(50000);
-            Console.WriteLine(uniqueInstanceWebDriver.Title);
+            Thread.Sleep(5000);
             uniqueInstanceWebDriver.FindElement(By.XPath("//input[@id='twotabsearchtextbox']")).SendKeys("Mobiles");
             //Thread.Sleep(500000);
-            Console.WriteLine("output");
+            Console.WriteLine("output is "+uniqueInstanceWebDriver.Title);
         }
 
        /* [Test]
